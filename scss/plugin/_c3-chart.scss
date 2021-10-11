@@ -1,0 +1,23 @@
+.c3{
+    .c3-axis-y,
+    .c3-axis-x{
+        fill: var(--font-555);
+        line,
+        path{
+            stroke: var(--font-ccc);
+        }
+    }
+    .c3-legend-item{
+        text{
+            fill: var(--font-555);
+        }
+    }
+}
+
+#chart-pie{
+    .c3-chart-arc{
+        path{
+            stroke: var(--card-color);
+        }
+    }
+}

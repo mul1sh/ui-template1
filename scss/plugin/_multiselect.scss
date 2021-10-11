@@ -1,0 +1,114 @@
+// multi select dropdown
+
+.multiselect-container{
+    >li{
+        >a>label{
+            display: block;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+.multiselect-custom {
+    + .btn-group ul.multiselect-container {
+        > li {
+            > a {
+                display: block;
+                outline: none;
+                padding: 5px 15px;
+                line-height: 24px;
+    
+                label.checkbox,
+                label.radio {
+                    padding: 0;
+    
+                    &:before {
+                        background-color: var(--font-ccc);
+                        display: inline-block;
+                        position: relative;
+                        content: "";
+                        font-size: 12px;
+                        width: 16px;
+                        height: 16px;                        
+                        margin-right: 10px;
+                        top: 3px;
+                    }
+    
+                    input[type="checkbox"],
+                    input[type="radio"] {
+                        display: none;
+                    }
+                }
+                label.radio {
+    
+                    &:before {
+                        border-radius: 8px;
+                    }
+                }
+            }
+    
+            &.active {
+                > a {
+                    label:before {
+                        color: $white;
+                        background-color: var(--primary-color);
+                        text-align: center;
+                        font-family: 'Material-Design-Iconic-Font';
+                        content: '\f26b';
+                    }
+                }
+                .checkbox,
+                .radio{
+                    color: var(--primary-color);
+                }
+            }
+            &:hover{
+                background-color: var(--font-eee);
+            }
+            &.disabled{
+                opacity: 0.4;
+            }
+        }
+    }
+}
+
+.btn.multiselect-clear-filter {
+	position: absolute;
+	border: none;
+	background: transparent;
+	outline: none;
+	top: 2px;
+	right: 0;
+	padding-left: 0;
+	padding-right: 0;
+	z-index: 9 !important;
+
+	&:hover,
+	&:focus {
+		background: transparent;
+		outline: none;
+	}
+}
+
+.multiselect_div {
+
+    .btn-group{
+
+        display: block;
+
+        .btn{
+            text-align: left;
+			position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        ul{
+            width: 100%;
+            font-size: 14px;
+        }
+    }
+}

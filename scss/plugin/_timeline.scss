@@ -1,0 +1,101 @@
+
+.activity-feed {
+	list-style-type: none;
+    
+	.feed-item {
+		position: relative;
+		min-height: 60px;
+        border-left: 2px solid var(--border-color);
+        
+        &:last-child { 
+            border-color: transparent;
+        }
+
+		&:before {
+            color: var(--font-500);
+			content: attr(data-time);
+			display: flex;
+			position: absolute;
+			text-align: center;
+			justify-content: center;
+            align-items: center;
+            width: 100px;
+			left: 15px;
+			top: -22px;
+			font-size: 12px;
+        }
+        
+        &::after {
+            background-color: var(--card-color);
+            content: attr(data-content);
+            font-family: "Material-Design-Iconic-Font";
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: absolute;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            border-radius: 50%;
+            font-size: 20px;
+            top: 0;
+            left: -16px;
+            width: 30px;
+            height: 20px;
+        }
+        
+		.card  {
+            
+			&:hover {
+				box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+				transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+			}
+			label {
+				display: block;
+				cursor: pointer;
+			}
+		}
+    }
+    
+    input[type="checkbox"] {
+        display: none;
+        &:checked {
+            ~ label {
+                &:after {
+                    transform: rotate(45deg);
+                    color: $red;
+                }
+            }
+            ~ .feed-content {
+                max-height: 1000px;
+                padding-top: 10px;
+                margin-top: 15px;
+                transition: max-height .25s ease-in;
+            }
+        }
+    }
+    
+    .feed-content {
+        max-height: 0;
+        overflow: hidden;
+
+        blockquote {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: -25px;
+                top: 0;
+                height: 100%;
+                border-left: 2px solid $orange;
+            }
+        }
+    }
+}
+
+[data-color=red] { &:after { color: $red !important; } }
+[data-color=blue] { &:after { color: $info !important; } }
+[data-color=green] { &:after { color: $green !important; } }
+[data-color=yellow] { &:after { color: $orange !important; } }

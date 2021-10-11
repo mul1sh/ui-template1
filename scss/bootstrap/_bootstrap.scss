@@ -1,0 +1,579 @@
+// Bootstrap Design customize for PostMan
+
+// project all typography 
+h1, h2, h3, h4, h5, h6{
+    color: var(--font-555);
+    a{
+        color: inherit;
+    }
+}
+a{
+    text-decoration: none;
+}
+p{
+    color: var(--font-555);
+}
+.border,
+.border-top,
+.border-end,
+.border-bottom,
+.border-start{
+    border-color: var(--border-color) !important;
+}
+.border-primary{
+    border-color: var(--primary-color) !important;
+}
+
+.text-muted{
+    color: var(--text-muted)!important;
+}
+
+.dropdown {
+    .dropdown-toggle::after{
+        display: none;
+    }
+    .dropdown-menu{
+        @include box-shadow($box-shadow);
+        overflow: hidden;
+        font-size: 14px;
+        border: 0;
+        padding: 0;
+        
+        .dropdown-item{
+            text-transform: capitalize;
+            padding: 10px 15px;
+            &:hover{
+                background-color: var(--primary-color);
+                color: $white;
+            }
+        }
+    }
+}
+
+
+.link {
+    color: var(--primary-color);
+}
+
+// User avatar design
+.avatar {
+    
+    height: 40px;
+    width: 40px;
+
+    .no-image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.timber{
+            background-color: rgba($timber, 0.2);
+            color: $timber;
+        }
+        &.purple{
+            background-color: rgba($purple, 0.2);
+            color: $purple;
+        }
+        &.orange{
+            background-color: rgba($orange, 0.2);
+            color: $orange;
+        }
+        &.red{
+            background-color: rgba($red, 0.2);
+            color: $red;
+        }
+        &.green{
+            background-color: rgba($green, 0.2);
+            color: $green;
+        }
+        &.azura{
+            background-color: rgba($azura, 0.2);
+            color: $azura;
+        }
+        &.cyan{
+            background-color: rgba($cyan, 0.2);
+            color: $cyan;
+        }
+    }
+
+    &.b-primary{
+        border-color: var(--primary-color) !important;
+    }
+    &.b-orange{
+        border-color: $orange !important;
+    }
+    &.b-blush{
+        border-color: $blush !important;
+    }
+    &.b-pink{
+        border-color: $pink !important;
+    }
+    &.b-blue{
+        border-color: $blue !important;
+    }
+    &.b-purple{
+        border-color: $purple !important;
+    }
+
+    &.xs{
+        height: 16px;
+        width: 16px;
+    }
+    &.sm{
+        height: 26px;
+        width: 26px;
+        font-size: 12px;
+    }
+    &.lg{
+        height: 60px;
+        width: 60px;
+    }    
+    &.xxl{
+        height: 170px;
+        width: 170px;
+        font-size: 40px;
+    }
+
+    &.avatar-bg{
+        position: relative;
+        .a-bg-1,
+        .a-bg-2{
+            background: var(--primary-color);
+            position: absolute;
+            display: block;
+            z-index: -1;
+            border-radius: 200px;
+        }
+
+        .a-bg-1{
+            top: -15px;
+            left: -15px;
+            height: 90px;
+            width: 90px;
+            opacity: 0.1;
+        }
+        .a-bg-2{
+            top: -40px;
+            left: -40px;
+            height: 140px;
+            width: 140px;
+            opacity: 0.05;
+        }
+    }
+}
+
+// List Group design
+.list-group {
+    .list-group-item {
+        border-color: var(--border-color);
+        font-size: 15px;
+        color: var(--font-555);
+        &.active{
+            background-color: var(--primary-color) !important;
+            color: $white !important;
+        }
+        &.disabled{
+            color: var(--font-ccc);
+        }
+    }
+    &.custom{
+        .list-group-item {
+            background-color: var(--card-color);
+        }
+    }
+}
+
+// all inputs and form group design
+.input-group {
+    .input-group-prepend,
+    .input-group-append{
+        .input-group-text{
+            background-color: var(--card-color);
+            border-color: var(--border-color);
+        }
+    }
+    &.input-group-lg{
+        .form-control{
+            font-size: 16px;
+            height: calc(1.5em + 1rem + 10px);
+        }
+    }
+}
+.form-control {
+    border-color: var(--border-color);
+    background-color: var(--card-color);
+    font-size: 14px;
+    height: auto;
+
+    &.form-control-lg{
+        height: calc(1.5em + 1.3rem + 2px);
+    }
+
+    &:focus{
+        box-shadow: none;
+        outline: none;
+        border-color: var(--primary-color);
+        background-color: var(--sidebar-bg);
+    }
+}
+
+// project all btn design
+.btn {
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    &.btn-rounded{
+        border-radius: 60px;
+    }
+
+    &.btn-primary{
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+    &.btn-outline-primary{
+        background-color: transparent;
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        &:hover{
+            background-color: var(--primary-color);
+            color: $white;
+        }
+    }
+
+    &.btn-secondary{
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
+    &.btn-outline-secondary{
+        background-color: transparent;
+        border-color: var(--secondary-color);
+        color: var(--secondary-color);
+        &:hover{
+            background-color: var(--secondary-color);
+            color: $white;
+        }
+    }
+
+    &.btn-dark{
+        background-color: var(--dark-color);
+        border-color: var(--dark-color);
+        color: var(--white-color);
+    }
+    &.btn-outline-dark{
+        background-color: transparent;
+        border-color: var(--dark-color);
+        color: var(--dark-color);
+        &:hover{
+            background-color: var(--dark-color);
+            color: $white;
+        }
+    }
+
+    &.btn-default{
+        background-color: var(--font-eee);
+        border-color: var(--font-eee);
+        color: var(--font-555);
+    }
+
+    &.btn-outline-google{
+        border-color: #EA4335;
+        color: #EA4335;
+        &:hover{
+            background-color: #EA4335;
+            color: $white;
+        }
+    }
+    &.btn-outline-facebook{
+        border-color: #1877F2;
+        color: #1877F2;
+
+        &:hover{
+            background-color: #1877F2;
+            color: $white;
+        }
+    }
+}
+
+// blockquote
+.blockquote {
+    border-left: 3px solid var(--primary-color);
+    &.blockquote-sm{
+        font-size: 12px;
+    }
+}
+
+// nav tabs design
+.nav-tabs {
+    &.tab-custom {
+        background: var(--sidebar-bg);
+        border-radius: .25rem;
+        padding: 5px;
+
+        .nav-link{
+            color: var(--font-555);
+            border-radius: .25rem;
+            border: 0;
+
+            &.active{
+                background-color: var(--primary-color);
+                color: $white;
+            }
+        }
+
+        &.tab-sm{
+            .nav-link{
+                padding: 5px 10px;
+            }
+        }
+    }
+    &.page-header-tabs{
+        .nav-link{
+            border: 0;
+            color: var(--font-555);
+            &.active,
+            &:hover{
+                border-bottom: 1px solid var(--primary-color);
+                color: var(--primary-color);
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+// pagination
+.pagination-custom {
+    .page-link{
+        background-color: var(--card-color);
+        color: var(--font-555);
+        border-color: var(--border-color);
+    }
+
+    .page-item{
+        &.active .page-link{
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+    }
+}
+
+// table
+.table {
+    color: var(--font-555);
+
+    tbody tr:hover{
+        color: var(--dark-color);
+    }
+
+    &.vertical-center{
+        th, td{
+            vertical-align: middle;
+        }
+    }
+    &.no-wrap{
+        th, td{
+            white-space: nowrap;
+        }
+    }
+
+    thead th{
+        border-bottom-color: var(--primary-color);
+    }
+    th, td{
+        border-color: var(--border-color);
+    }
+
+    &.table-dark{
+        color: var(--font-ccc);
+    }
+    &.card-table{
+        thead th{
+            background-color: var(--font-eee);
+            font-size: .625rem;
+            border-bottom: 1px;
+        }
+        tbody td:first-child,
+        thead th:first-child{
+            padding-left: 1.3rem!important;
+        }
+        tbody td:last-child,
+        thead th:last-child{
+            padding-right: 1.3rem!important;
+        }
+    }
+}
+
+// CheckBox design
+.c_checkbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 20px;
+    margin: 0;
+    height: 20px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:hover input ~ .checkmark {
+        border-color: var(--primary-color);
+    }
+
+    input {
+        cursor: pointer;
+        position: absolute;
+        opacity: 0;
+
+        &:checked ~ .checkmark {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            &:after {
+                display: block;
+            }
+        }
+        &:disabled ~ .checkmark {
+            opacity: .5;
+        }
+    }
+
+    .checkmark {
+        border: 1px solid var(--font-ccc);
+        border-radius: $border-radius;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+
+        &::after {
+            border: solid $white;
+            content: "";
+            position: absolute;
+            display: none;
+            left: 7px;
+            top: 3px;
+            width: 5px;
+            height: 10px;            
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+}
+
+// card layout design
+.card {
+    background-color: var(--card-color);
+    border-color: var(--border-color);
+
+    // card header
+    .card-header{
+        border-color: var(--border-color);
+    }
+
+    // card footer
+    .card-footer{
+        border-color: var(--border-color);
+    }
+}
+.card-columns {
+    @include max-screen($break-xxlarge){
+        column-count: 3;
+    }
+    @include max-screen($break-xlarge){
+        column-count: 2;
+    }
+    @include max-screen($break-large){
+        column-count: 3;
+    }
+    @include max-screen($break-1024){
+        column-count: 2;
+    }
+    @include max-screen($break-small){
+        column-count: 1;
+    }
+}
+
+// 
+.tagsinput-area{
+    .bootstrap-tagsinput{
+        padding: 5px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        input{
+            border: 0;
+            flex-grow: 1;
+            &:focus{
+                outline: 0;
+            }
+        }
+
+        .tag{
+            background: var(--primary-color);
+            color: $white;
+            padding: 3px 25px 3px 3px;
+            margin: 2px;
+            border-radius: 4px;
+            position: relative;
+
+            > span{
+                position: absolute;
+                right: 8px;
+                top: 3px;
+
+                &::after{
+                    content: "\f136";
+                    font-family: "Material-Design-Iconic-Font";
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+// custom Alerts
+.custom-alert {
+    &.alert-primary{
+        color: $white;
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+    &.alert-secondary{
+        color: $white;
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
+
+    &.alert-success{
+        color: $white;
+        background-color: $color-success;
+        border-color: $color-success;
+    }
+    &.alert-danger{
+        color: $white;
+        background-color: $color-danger;
+        border-color: $color-danger;
+    }
+    &.alert-warning{
+        color: $white;
+        background-color: $color-warning;
+        border-color: $color-warning;
+    }
+    &.alert-info{
+        color: $white;
+        background-color: $color-info;
+        border-color: $color-info;
+    }
+    &.alert-dark{
+        color: var(--white-color);
+        background-color: var(--dark-color);
+        border-color: var(--dark-color);
+    }
+}

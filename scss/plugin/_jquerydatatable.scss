@@ -1,0 +1,49 @@
+.dataTables_wrapper{
+
+    .dataTables_length,
+    .dataTables_filter{
+
+        select,
+        input{
+            border:1px solid var(--border-color);
+            background-color: var(--card-color);
+            height: auto;
+            box-shadow: none;
+            outline: none;
+            padding: .375rem .75rem;
+            border-radius: .25rem;
+            line-height: 1.5;
+        }
+        
+    }
+    table.dataTable{
+        thead th,
+        thead td{
+            border-bottom-color: var(--primary-color);
+        }
+        &.no-footer{
+            border-bottom-color: var(--border-color);
+        }
+    }
+    .dataTables_paginate{
+        
+        .paginate_button {
+            color: var(--font-555) !important;
+            border: 0 !important;
+            border-radius: .25rem;
+            padding: .375rem .75rem;
+
+            &.current,
+            &:hover{
+                background: var(--primary-color);
+                color: $white !important;
+                border: 0;
+                &:hover{
+                    background: var(--primary-color);
+                    color: $white !important;
+                    border: 0;
+                }
+            }
+        }
+    }
+}

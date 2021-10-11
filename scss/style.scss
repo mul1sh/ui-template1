@@ -1,0 +1,39 @@
+// import google fonts
+@import 'font/fonts';
+
+// Bootstrap main scss
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "mixins/responsive";
+@import "mixins/clearfix";
+@import "mixins/css3";
+@import "mixins/animation";
+
+// Project core scss
+@import "base/core";
+@import "base/variables";
+@import "base/general";
+@import "base/sidebar";
+
+// admin template menu scss
+@import "base/menu";
+
+// Main layout
+@import "base/layout";
+
+// Bootstrap custome component 
+@import "bootstrap/bootstrap";
+
+// plugin scss
+@import "plugin/datepicker";
+@import "plugin/add-note";
+@import "plugin/todo";
+@import "plugin/fullcalendar";
+@import "plugin/kboard";
+@import "plugin/jquerydatatable";
+
+@import "plugin/c3-chart";
+@import "plugin/timeline";
+@import "plugin/dropify";
+@import "plugin/wizard";
+@import "plugin/multiselect";

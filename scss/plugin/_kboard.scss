@@ -1,0 +1,59 @@
+.scrum-body{
+    flex-direction: row;
+
+    &.list{
+        flex-direction: column;
+    }
+
+    .scrum-board{
+        flex: 1;
+
+        &.create{
+            .scrum-task:before{
+                background-color: $info;
+            }
+        }
+        &.in-progress{
+            .scrum-task:before{
+                background-color: $orange;
+            }
+        }
+        &.done{
+            .scrum-task:before{
+                background-color: $green;
+            }
+        }
+    }
+    .scrum-task{
+        position: relative;
+        cursor: all-scroll;
+
+        &::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 20px;
+            width: 20px;
+            height: 3px;
+        }
+    }
+
+    .st-description:not(:empty) {
+
+    }
+    .st-date:not(:empty) {
+        color: var(--font-777);
+        font-size: 12px;
+    }
+    .st-assignee{
+
+        &:not(:empty) {
+            text-align:right; 
+        }
+    }
+    
+    .scrum-board-column{
+        min-height: 200px;
+        height: 100%;
+    }
+}

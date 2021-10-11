@@ -1,0 +1,137 @@
+// main menu sidebar list
+.search{
+    position: relative;
+    .zmdi-search,
+    .zmdi-dialpad{
+        position: absolute;
+        top: 12px;
+        z-index: 99;
+        font-size: 18px;
+    }
+    .zmdi-search{
+        left: 16px;
+    }
+    .zmdi-dialpad{
+        right: 16px;
+    }
+    .form-control{
+        padding-left: 36px;
+        font-size: 16px;
+    }
+}
+.chat-list{
+    list-style: none;
+    padding: 0;
+
+    li{
+        position: relative;
+        margin-bottom: 4px;
+
+        .status{
+            border: 1px solid var(--card-color);
+            position: absolute;
+            z-index: 1;
+            width: 8px;
+            height: 8px;
+        }
+        .hover_action{
+            @include transition(all .2s ease-in-out);
+            background: var(--card-color);
+            position: absolute;
+            visibility: hidden;
+            z-index: 99;
+            right: 11px;
+            top: 8px;
+            .btn{
+                border: 0;
+                padding: 4px;
+            }
+        }
+        img.avatar{
+            filter: grayscale(1);
+        }
+
+        &:hover{
+            .hover_action{
+                visibility: visible;
+            }
+            a.card{
+                border-color: var(--primary-color);
+                text-decoration: none;
+            }
+            img.avatar{
+                filter: none;
+            }
+        }
+
+        &.header{
+            color: var(--font-888);
+            text-transform: uppercase;
+            font-size: 12px;
+
+            .dropdown-item{
+                font-size: 14px;
+            }
+        }
+        &.active{
+            a{
+                border-color: var(--primary-color);
+            }
+        }
+        &.away{
+            .status{
+                background-color: $color-warning;
+            }
+        }
+        &.online{
+            .status{
+                background-color: $color-success;
+            }
+        }
+        &.busy{
+            .status{
+                background-color: $color-danger;
+            }
+        }
+    }
+
+    .card{
+        @include transition(all .2s ease-in-out);
+        color: var(--font-888);
+        border-color: var(--border-color);
+
+        .card-body{
+            padding: 16px;
+            h6{
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+.card-user-avatar{
+    position: relative;
+    width: 140px;
+    margin: 0 auto;
+    
+    img{
+        border-radius: 35px;
+    }
+    .btn{
+        border: 1px solid var(--card-color) !important;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 50px;
+        width: 26px;
+        height: 26px;
+        line-height: 18px;
+        font-size: 14px;
+    }
+}
+
+.social .icon{
+    color: var(--primary-color);
+    font-size: 20px;
+}

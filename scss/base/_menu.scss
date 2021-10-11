@@ -1,0 +1,113 @@
+.menu-list {
+    list-style: none;
+    position: relative;
+
+    li {
+        &.header {
+            color: var(--text-muted);
+            position: relative;
+            font-size: 11px;
+            padding: 8px 12px;
+    
+            &:before {
+                content: "--";
+                position: absolute;
+                left: 0;
+                top: 7px;
+            }
+        }
+        &.active {
+            > a {
+                color: var(--primary-color);
+            }
+            &.open{
+                .ml-menu{
+                    display: block;
+                }
+            }
+        }
+
+        a {
+            color: var(--font-555);
+            display: flex;
+            align-items: center;
+            position: relative;
+            font-size: 15px;
+    
+            i {
+                text-align: center;
+                width: 24px;
+                font-size: 18px;
+            }
+
+            &:hover{
+                text-decoration: none;
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    .menu-toggle {
+        &:after,
+        &:before {
+            @include transform(scale(0));
+            @include transition(all .3s);
+            position: absolute;
+            top: calc(50% - 11px);
+            right: 0;
+            font-family: 'Material-Design-Iconic-Font';
+        }
+        &:before {
+            content: '\f2fb';
+            @include transform(scale(1));
+        }
+        &:after {
+            content: '\f2f9';
+            @include transform(scale(0));
+        }
+        &.toggled {
+
+            color: var(--primary-color);
+
+            &:before {
+                content: '\f2f9';
+                @include transform(scale(0));
+                font-family: 'Material-Design-Iconic-Font';
+            }
+    
+            &:after {
+                @include transform(scale(1));
+            }
+
+            + .ml-menu {
+                border-color: var(--primary-color) !important;
+
+                a:hover{
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }           
+
+    .ml-menu {
+        display: none;
+        list-style: none;
+
+        li {
+
+            a {
+                padding: 5px 0 5px 24px;
+                font-size: 14px;
+                
+                &:before {
+                    @include transition(all .3s);
+                    color: var(--font-ccc);
+                    content: '--';
+                    position: absolute;
+                    left: -8PX;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

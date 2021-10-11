@@ -1,0 +1,164 @@
+/* General Styles */
+body{
+    @include transition(all .3s ease-in-out);
+    background-color: var(--body-color);
+    color: var(--font-color);
+	font-family: var(--font-family);
+    font-size: $font-size;
+
+    &.admin{
+        .sidebar {
+            width: 320px;
+        }
+        .main-body {
+            @include transition(all .2s ease-in-out);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+            flex-flow: column;
+            min-width: 0;
+            width: 100%;
+            height: 100vh;
+
+            .body-page{
+                @include scrollbar(scrollbar);
+                overflow-y: auto;
+                overflow-x: hidden;
+                -webkit-box-flex: 2;
+                -ms-flex: 2;
+                flex: 2;
+            }
+        }        
+    }
+}
+
+.theme-indigo{
+    font-family: var(--font-family);
+    .brand svg path{
+        fill: var(--primary-color);
+    }
+}
+.theme-cyan{
+    font-family: var(--font-family);
+    .brand svg path{
+        fill: var(--primary-color);
+    }
+}
+.theme-green{
+    font-family: var(--font-family);
+    .brand svg path{
+        fill: var(--primary-color);
+    }
+}
+.theme-blush{
+    font-family: var(--font-family);
+    .brand svg path{
+        fill: var(--primary-color);
+    }
+}
+.theme-dark{
+    font-family: var(--font-family);
+    .brand svg path{
+        fill: var(--primary-color);
+    }
+}
+
+
+.text-primary{
+    color: var(--primary-color) !important;
+}
+.bg-primary{
+    background-color: var(--primary-color) !important;
+}
+
+.font-18{
+    font-size: 18px;
+}
+.font-22{
+    font-size: 22px;
+}
+.media{
+    display: flex;
+    //align-items: center;
+    .media-body{
+        width: 100%;
+    }
+}
+
+// widgets
+.label-absolute{
+    position: absolute;
+    top: -1px;
+}
+.mail-list-widget{
+    .user-name{
+        min-width: 110px;
+        max-width: 110px;
+    }
+    .date{
+        white-space: nowrap;
+    }
+}
+.zmdi{
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+.ul-list{
+    li{
+        line-height: 26px;
+        a{
+            color: var(--font-555);
+            &:hover{
+                color: var(--primary-color);
+            }
+        }
+    }
+}
+.apexcharts-svg{
+    line{
+        stroke: var(--border-color);
+    }
+}
+
+
+
+@include max-screen($break-small - 1px){
+    .hidden-xs{
+		display: none !important;
+	}
+}
+@include max-screen($break-medium){
+    .hidden-sm{
+		display: none !important;
+	}
+}
+@include max-screen($break-1024){
+    .hidden-md{
+		display: none !important;
+	}
+}
+
+.row-deck{
+    >.col,
+    >[class*='col-']{
+        display: flex;
+        align-items: stretch;
+        .card{
+            flex: 1 1 auto;
+        }
+    }
+}

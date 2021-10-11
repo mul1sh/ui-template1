@@ -1,0 +1,206 @@
+
+// default light version color code
+:root {
+    --dark-color: 		#181717;
+    --white-color: 		#ffffff;
+
+    --font-555: 		#555555;
+    --font-ccc: 		#cccccc;
+    --font-eee: 		#f9fbfd;
+    
+	--font-color: 		#626569;
+	--text-muted: 		#95aac9;
+
+	--border-color:		#F5F5F5;
+	--card-color: 		#ffffff;
+	--body-color: 		#ffffff;
+	--box-shadow: 		#c7c1c1;
+	--sidebar-bg:	    #F3F7FA;
+
+	[class="theme-indigo"] {
+		--sidebar-bg:	#f3f3f3;
+	}
+
+	[class="theme-cyan"] {
+		--sidebar-bg:	#f3f2ef;
+	}
+	
+	[class="theme-blush"] {
+		--sidebar-bg:	#f7f7f7;
+	}
+
+	[class="theme-dark"] {
+		--font-555: 	#000000;
+	}
+	
+}
+
+// dark version color code
+[data-theme="dark"] {
+    --dark-color: 		#ebebeb;
+    --white-color: 		#181717;
+    
+    --font-555: 		#868686;
+    --font-ccc: 		#cccccc;
+    --font-eee: 		#202225;
+    
+    --font-color: 		#838588;
+	--text-muted: 		#66686b;
+
+	--border-color:		#1d1d1d;
+	--card-color: 		#171717;
+	--body-color: 		#171717;
+    --box-shadow: 		#484c52;
+	--sidebar-bg:	    #1d1d1d;
+
+	[class="theme-indigo"] {
+		--primary-color: 	#4b2ea9;
+		--font-555: 		#6b6b6b;
+		--border-color:		#101013;
+		--card-color: 		#0b0b0c;
+		--body-color: 		#09090a;
+		--sidebar-bg:	    #09090a;
+	}
+
+	[class="theme-cyan"] {
+		--sidebar-bg:	#1d1d1d;
+	}
+
+	[class="theme-blush"] {
+		--font-555: 		#646173;
+		--border-color:		#19172b;
+		--card-color: 		#131121;
+		--body-color: 		#151323;
+		--sidebar-bg:	    #151323;
+	}
+
+	[class="theme-dark"] {
+		--font-555: 		#ffffff;
+		--primary-color: 	#ffffff;
+	
+		a{
+			color: var(--primary-color);
+		}
+	
+		.badge-info,
+		.badge-danger,
+		.badge-secondary,
+		.badge-primary,
+		.badge-success,
+		.badge-warning,
+		.progress-bar,
+		.bg-success,
+		.bg-warning{
+			background-color: var(--primary-color) !important;
+			color: $dark;
+		}
+		.text-info,
+		.text-success,
+		.text-primary,
+		.text-warning,
+		.text-muted{
+			color: var(--primary-color) !important;
+		}
+		.btn-dark{
+			background-color: var(--primary-color) !important;
+			color: $dark !important;
+		}
+		.btn-success,
+		.btn-info,
+		.btn-primary{
+			background-color: var(--primary-color) !important;
+			border-color: var(--primary-color) !important;
+			color: $dark;
+		}
+	}
+}
+
+// Theme indigo color and font setting 
+$theme-indigo:		    #2a1a5e !default;
+[class="theme-indigo"] {
+
+	--font-family: 		'Montserrat', sans-serif;
+	--primary-color: 	#2a1a5e;
+    --secondary-color: 	#d4dc52;
+    
+	--primary-gradient: linear-gradient(45deg, #6d52dc, #d4dc52);
+}
+
+// Theme cyan color and font setting 
+$theme-cyan:		    #21aa93 !default;
+[class="theme-cyan"] {
+	--font-family: 		'IBM Plex Sans', sans-serif;
+	--primary-color: 	#21aa93;
+    --secondary-color: 	#00028c;
+    
+	--primary-gradient: linear-gradient(45deg, #21aa93, #00028c);
+}
+
+// Theme green color and font setting 
+$theme-green:		    #4fb783 !default;
+[class="theme-green"] {
+	--font-family: 		'Libre Franklin', sans-serif;
+	--primary-color: 	#4fb783;
+    --secondary-color: 	#446e5c;
+    
+	--primary-gradient: linear-gradient(45deg, #4fb783, #446e5c);
+}
+
+// Theme Blush color and font setting 
+$theme-blush:		    #ea2e69 !default;
+[class="theme-blush"] {
+	--font-family: 		'Roboto', sans-serif;
+	--primary-color: 	#ea2e69;
+    --secondary-color: 	#7b58bd;
+    
+	--primary-gradient: linear-gradient(45deg, #ea2e69, #7b58bd);
+}
+
+// special dark edition theme color and font setting 
+$theme-dark:		    #000000 !default;
+[class="theme-dark"] {
+	--font-family: 		'Roboto', sans-serif;
+	--font-555: 		#000000;
+	--primary-color: 	#000000;
+    --secondary-color: 	#5d5d5d;
+    
+	--primary-gradient: linear-gradient(45deg, #000000, #5d5d5d);
+
+	a{
+		color: var(--primary-color);
+	}
+	img,
+	.avatar{
+		filter: grayscale(100%);
+		&:hover{
+			filter: none;
+		}
+	}
+
+	.badge-info,
+	.badge-danger,
+	.badge-secondary,
+	.badge-primary,
+	.badge-success,
+	.badge-warning,
+	.progress-bar,
+	.bg-success,
+	.bg-warning{
+		background-color: var(--primary-color) !important;
+		color: $white;
+	}
+	.text-info,
+	.text-success,
+	.text-primary,
+	.text-warning,
+	.text-muted{
+		color: var(--primary-color) !important;
+	}
+	.btn-success,
+	.btn-info,
+	.btn-primary{
+		background-color: var(--primary-color) !important;
+		border-color: var(--primary-color) !important;
+		color: $white;
+	}
+}

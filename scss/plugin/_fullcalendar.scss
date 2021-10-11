@@ -1,0 +1,34 @@
+.fc {
+    .fc-scrollgrid,
+    .fc-scrollgrid *{
+        border-color: var(--border-color);
+    }
+    .fc-daygrid-day-number,
+    .fc-col-header-cell-cushion{
+        color: var(--font-555);
+    }
+
+    // weekend day
+    .fc-non-business{
+        background: transparent;
+    }
+    .fc-h-event{
+        background-color: var(--primary-color);
+    }
+}
+.datepicker{
+    &.datepicker-dropdown{
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+[data-theme="dark"] {
+    
+    [class="theme-dark"] {
+        .fc {
+            .fc-h-event *{
+                color: $dark;
+            }
+        }   
+    }
+}
